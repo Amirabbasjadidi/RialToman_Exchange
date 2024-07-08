@@ -34,7 +34,7 @@
 
 ## استفاده از فونت وزیر
 
-در این پروژه از فونت [وزیر](https://github.com/rastikerdar/vazir-font) استفاده شده است. این فونت تحت مجوز [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web) منتشر شده است که به شما اجازه استفاده، تغییر و توزیع آن را با شرایط خاص می‌دهد. این فونت توسط مرحوم صابر راستی کردار طراحی شده است. برای اطلاعات بیشتر و دانلود این فونت می‌توانید به مخزن [فونت وزیر](https://github.com/rastikerdar/vazir-font) در گیت‌هاب مراجعه کنید.
+در این پروژه از فونت [وزیر](https://github.com/rastikerdar/vazir-font) استفاده شده است. این فونت تحت مجوز [SIL Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web) منتشر شده است که به شما اجازه استفاده، تغییر و توزیع آن را با شرایط خاص می‌دهد. این فونت توسط مرحوم صابر راستی کردار طراحی شده است. برای اطلاعات بیشتر و دانلود این فونت می‌توانید به مخزن [فونت وزیر](https://github.com/rastikerdar/vazirmatn) در گیت‌هاب مراجعه کنید.
 
 ## مجوز
 
