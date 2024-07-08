@@ -2,6 +2,7 @@
 #:import MDTextField kivymd.uix.textfield.MDTextField
 #:import MDFloatingActionButton kivymd.uix.button.MDFloatingActionButton
 #:import MDLabel kivymd.uix.label.MDLabel
+#:import Window kivy.core.window.Window
 
 ScreenManager:
     MainScreen:
@@ -10,20 +11,21 @@ ScreenManager:
     name: 'main'
     BoxLayout:
         orientation: 'vertical'
-        padding: 10
-        spacing: 5
+        padding: [dp(10), dp(20)]
+        spacing: dp(10)
 
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
-            height: dp(200)
+            height: self.minimum_height
+            spacing: dp(10)
 
             MDTextField:
                 id: input_rial
                 hint_text: app.reshape_text("Rial:")
                 input_filter: 'int'
                 size_hint_x: None
-                width: 300
+                width: min(dp(300), Window.width * 0.8)
                 pos_hint: {'center_x': 0.5}
                 font_name: 'Vazir'
                 halign: 'right'
@@ -49,14 +51,15 @@ ScreenManager:
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
-            height: dp(200)
+            height: self.minimum_height
+            spacing: dp(10)
 
             MDTextField:
                 id: input_toman
                 hint_text: app.reshape_text("Toman:")
                 input_filter: 'int'
                 size_hint_x: None
-                width: 300
+                width: min(dp(300), Window.width * 0.8)
                 pos_hint: {'center_x': 0.5}
                 font_name: 'Vazir'
                 halign: 'right'
@@ -82,7 +85,8 @@ ScreenManager:
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
-            height: dp(200)
+            height: self.minimum_height
+            spacing: dp(10)
 
             MDLabel:
                 id: output
@@ -96,8 +100,7 @@ ScreenManager:
                 text_size: self.width, None
 
         MDFloatingActionButton:
-            icon: "github_icon.png"  # مسیر آیکون
+            icon: "github_icon.png"
             pos_hint: {'center_x': 0.5, 'center_y': 0.1}
             on_press: app.open_github()
-            md_bg_color: 1, 1, 1, 1  # تغییر رنگ پس‌زمینه به سفید
-
+            md_bg_color: 1, 1, 1, 1
