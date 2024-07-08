@@ -13,12 +13,11 @@ import arabic_reshaper
 from bidi.algorithm import get_display
 from number_to_text import convert_number_to_text, format_number_with_commas
 
-# Register the custom font
 LabelBase.register(name='Vazir', fn_regular='Fonts/Vazir.ttf')
 
 class MainScreen(Screen):
     def update_input_label(self, text, currency_type):
-        max_limit = 999999999999  # حداکثر مقدار برای تبدیل به متن
+        max_limit = 999999999999  
         if text.isdigit():
             number_value = int(text)
             if number_value > max_limit:
@@ -44,7 +43,7 @@ class MainScreen(Screen):
     def convert_to_toman(self):
         rial = self.ids.input_rial.text
         if rial.isdigit():
-            toman = int(rial) // 10  # تبدیل تومان به عدد صحیح
+            toman = int(rial) // 10  
             toman_text = convert_number_to_text(toman)
             formatted_toman = format_number_with_commas(toman)
             if toman_text:
@@ -57,7 +56,7 @@ class MainScreen(Screen):
     def convert_to_rial(self):
         toman = self.ids.input_toman.text
         if toman.isdigit():
-            rial = int(toman) * 10  # تبدیل ریال به عدد صحیح
+            rial = int(toman) * 10 
             rial_text = convert_number_to_text(rial)
             formatted_rial = format_number_with_commas(rial)
             if rial_text:
@@ -79,7 +78,7 @@ class ConverterApp(MDApp):
         return Builder.load_file('design.kv')
 
     def open_github(self):
-        webbrowser.open('https://github.com/Amirabbasjadidi')
+        webbrowser.open('https://github.com/Amirabbasjadidi/RialToman_Exchange')
 
 if __name__ == '__main__':
     ConverterApp().run()
