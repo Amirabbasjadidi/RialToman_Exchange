@@ -1,0 +1,103 @@
+#:import MDRaisedButton kivymd.uix.button.MDRaisedButton
+#:import MDTextField kivymd.uix.textfield.MDTextField
+#:import MDFloatingActionButton kivymd.uix.button.MDFloatingActionButton
+#:import MDLabel kivymd.uix.label.MDLabel
+
+ScreenManager:
+    MainScreen:
+
+<MainScreen>:
+    name: 'main'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 5
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(200)
+
+            MDTextField:
+                id: input_rial
+                hint_text: app.reshape_text("Rial:")
+                input_filter: 'int'
+                size_hint_x: None
+                width: 300
+                pos_hint: {'center_x': 0.5}
+                font_name: 'Vazir'
+                halign: 'right'
+                on_text: root.update_input_label(self.text, 'rial')
+
+            MDLabel:
+                id: input_rial_label
+                text: ""
+                halign: 'right'
+                theme_text_color: 'Secondary'
+                font_name: 'Vazir'
+                size_hint_y: None
+                height: dp(30)
+
+            MDRaisedButton:
+                text: app.reshape_text("تبدیل به تومان")
+                pos_hint: {'center_x': 0.5}
+                on_press: root.convert_to_toman()
+                font_name: 'Vazir'
+                size_hint_y: None
+                height: dp(40)
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(200)
+
+            MDTextField:
+                id: input_toman
+                hint_text: app.reshape_text("Toman:")
+                input_filter: 'int'
+                size_hint_x: None
+                width: 300
+                pos_hint: {'center_x': 0.5}
+                font_name: 'Vazir'
+                halign: 'right'
+                on_text: root.update_input_label(self.text, 'toman')
+
+            MDLabel:
+                id: input_toman_label
+                text: ""
+                halign: 'right'
+                theme_text_color: 'Secondary'
+                font_name: 'Vazir'
+                size_hint_y: None
+                height: dp(30)
+
+            MDRaisedButton:
+                text: app.reshape_text("تبدیل به ریال")
+                pos_hint: {'center_x': 0.5}
+                on_press: root.convert_to_rial()
+                font_name: 'Vazir'
+                size_hint_y: None
+                height: dp(40)
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: dp(200)
+
+            MDLabel:
+                id: output
+                text: ""
+                halign: 'center'
+                valign: 'top'
+                theme_text_color: 'Primary'
+                font_name: 'Vazir'
+                size_hint_y: None
+                height: dp(100)
+                text_size: self.width, None
+
+        MDFloatingActionButton:
+            icon: "github_icon.png"  # مسیر آیکون
+            pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+            on_press: app.open_github()
+            md_bg_color: 1, 1, 1, 1  # تغییر رنگ پس‌زمینه به سفید
+
