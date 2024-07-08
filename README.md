@@ -9,25 +9,25 @@
 
 ## نصب و راه‌اندازی
 
-1. ابتدا مخزن پروژه را کلون کنید:
+1. ابتدا مخزن پروژه را کلون کنید
     ```bash
     git clone https://github.com/Amirabbasjadidi/RialToman_Exchange.git
     cd RialToman_Exchange
     ```
 
-2. محیط مجازی پایتون را ایجاد کرده و فعال کنید:
+2. محیط مجازی پایتون را ایجاد کرده و فعال کنید
     ```bash
     python -m venv venv
     source venv/bin/activate  # برای سیستم‌عامل‌های یونیکس
     venv\Scripts\activate  # برای ویندوز
     ```
 
-3. وابستگی‌های پروژه را نصب کنید:
+3. وابستگی‌های پروژه را نصب کنید
     ```bash
     pip install -r requirements.txt
     ```
 
-4. برنامه را اجرا کنید:
+4. برنامه را اجرا کنید
     ```bash
     python main.py
     ```
