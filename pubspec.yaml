@@ -1,0 +1,36 @@
+name: rialtoman
+description: "Written with Flutter to convert Rial to Toman and vice versa."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: any
+  url_launcher: any
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/app/icon.png"
+
+flutter:
+  assets:
+    - assets/image/github.png
+  fonts:
+    - family: Vazir
+      fonts:
+        - asset: assets/fonts/Vazir.ttf
+
+  uses-material-design: true
