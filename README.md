@@ -10,7 +10,6 @@
 ## 📱 دریافت نسخه اندروید
 
 - دانلود فایل APK از بخش [Releases](https://github.com/Amirabbasjadidi/RialToman_Exchange/releases)
-- یا دریافت از فروشگاه [مایکت](#) 
 
 ---
 
